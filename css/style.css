@@ -1,0 +1,508 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center; /* Vertically align items */
+    padding: 20px; /* Retained original padding */
+    background-color: #1f1e3e;
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Align logo text with the logo image */
+}
+
+header .logo img {
+    margin-right: 10px; /* Spacing between the logo and text */
+}
+
+header .logo-text {
+    color: #ffffff;
+    font-size: large;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 10; /* Remove margin from the last item */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: large;
+}
+
+nav ul li a:hover {
+    color: #f4a261; /* Add hover effect */
+}
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #1f1e3e;
+    height: 15px;
+}
+/* Shared Container for Heading 1 and Overview */
+.header-overview-container {
+    background: url("/assets/images/header.jpg"); /* University image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Makes the background scroll smoothly */
+    color: white;
+    padding-bottom: 20px; /* Space below the overview section */
+}
+
+/* Heading Styles */
+.heading1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: left;
+    background: rgba(37, 59, 80, 0.6);
+    padding: 40px 20px;
+    height: 150px;
+    color: white;
+}
+
+/* Overview Section */
+.overview {
+    color: white; /* White text color */
+    background: rgba(37, 55, 100, 0.9);
+    padding: 40px 20px; /* Section padding */
+    line-height: 1.6; /* Comfortable line spacing */
+    text-align: justify; /* Adjust text alignment for readability */
+}
+
+.overview h2 {
+    font-size: 2.5em; /* Heading font size */
+    margin-bottom: 20px; /* Space below the heading */
+    margin-left: 60px;
+    text-align: justify;
+    border-bottom: 3px solid #f4a261; /* Accent line below the heading */
+    display: inline-block;
+    padding-bottom: 10px; /* Space between text and border */
+}
+
+.overview p {
+    font-size: 18px; /* Paragraph font size */
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: justify;
+}
+
+.heading1 h1 {
+    margin: 0;
+    font-size: 3em;
+    font-family: sans-serif;
+}
+
+/* Societies Overview Section */
+.societies-overview {
+    padding: 40px 20px; /* Padding for section separation */
+}
+
+/* Search Bar */
+.search-bar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}
+
+/* Societies Container */
+.societies-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Society Card */
+.society-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Add pointer cursor to indicate interactivity */
+}
+
+/* Hover Effect */
+.society-card:hover {
+    transform: translateY(-10px); /* Slightly raise the card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Image Style */
+.society-card img {
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Society Name */
+.society-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Description Text */
+.society-card p {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Anchor Tag (a) Styling to remove text-decoration */
+.society-card a {
+    color: inherit; /* Inherit the color from parent (text) */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Style for Society Objectives Bullet Points */
+.society-objectives ul {
+    list-style: none; /* Removes default bullets */
+    padding: 40px 20px; 
+    color: white;
+    background-color: rgba(101, 163, 165, 0.8);
+    font-size: 18px;
+}
+
+.society-objectives ul li {
+    margin-bottom: 10px; /* Adds spacing between list items */
+    padding-left: 30px; /* Adds space for custom bullet */
+    position: relative; /* Positions custom bullet */
+}
+
+.society-objectives ul li::before {
+    content: '+'; /* Unicode for bullet character */
+    font-size: 1.5em; /* Adjust bullet size */
+    color: #ff7f17; /* Custom bullet color */
+    position: absolute; /* Position it relative to list item */
+    left: 0; /* Align bullet to the left */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+}
+
+/* Body Background for Login Page */
+.login-body {
+    background: url("assets/campus-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Adjust the Login Page Layout */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Login Form Container */
+.login-form-container {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+.login-form-container label{
+    text-align: left;
+    display: block;
+}
+
+
+/* Input Fields */
+.login-form-container input {
+    width: 100%;
+    padding: 12px 0;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Submit Button */
+.login-form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1f1e3e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form-container button:hover {
+    background-color: rgba(37, 55, 100, 0.9);
+}
+
+.join-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1f1e3e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .join-button:hover {
+    background-color: #ff7f17;
+  }
+  
+
+  /* Styles for the Join Form Page */
+
+/* Adjust textarea styling to match inputs */
+.join-form-container textarea {
+    width: 100%;
+    padding: 12px 0;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Adjust Heading for Join Form */
+.join-form-container h2 {
+    font-size: 1.8em;
+    color: #1f1e3e;
+    margin-bottom: 20px;
+}
+
+/* Form Buttons */
+.join-form-container button {
+    background-color: #1f1e3e;
+    transition: background-color 0.3s ease;
+}
+
+.join-form-container button:hover {
+    background-color: rgba(37, 55, 100, 0.9);
+}
+
+
+/* Footer */
+footer {
+    position: relative;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+main h2 {
+    font-size: 2em;
+    color: #1f1e3e;
+    border-bottom: 3px solid #f4a261;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+ul {
+    padding-left: 20px;
+    color: #333;
+}
+
+section {
+    margin-bottom: 40px;
+}
+/* Style for the dropdown (select) */
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+  
+  /* Style for when the dropdown is focused */
+  select:focus {
+    border-color: #007BFF;
+    background-color: #e7f3ff;
+    outline: none;
+  }
+  
+  /* Hover effect on options */
+  select option:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Style for labels and form elements */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  textarea{
+    width: 100%;
+    padding-bottom: 20px;
+    padding: auto;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+/* Media Gallery */
+.media-gallery {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    display: flex; /* Align images in a single row */
+    justify-content: space-between; /* Space the images evenly */
+    align-items: center; /* Vertically center images */
+    flex-wrap: nowrap; /* Ensure images stay in a single row */
+    gap: 10px; /* Add space between images */
+    background-color: rgb(228, 243, 255);
+}
+
+.media-gallery img {
+    width: 250px; /* Set fixed width for images */
+    height: 250px; /* Set fixed height for images */
+    object-fit: fill; /* Ensures the images are cropped to fit the container if necessary */
+}
+
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Align the icons horizontally */
+    gap: 15px; /* Add space between the icons */
+}
+
+.contact-details ul li {
+    display: inline-block;
+}
+
+.contact-details ul li a {
+    text-decoration: none;
+    display: inline-block;
+    width: 40px; /* Set the width of the logo */
+    height: 40px; /* Set the height of the logo */
+    background-size: cover; /* Ensure the image covers the full area */
+    transition: transform 0.3s ease;
+}
+
+.contact-details ul li a:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    
+}
+
+.contact-details ul li a.email {
+    background-image: url('../assets/images/mail-logo.png'); /* Add the Outlook logo URL */
+}
+
+.contact-details ul li a.facebook {
+    background-image: url('../assets/images/fb-logo.png'); /* Add the Facebook logo URL */
+}
+
+.contact-details ul li a.instagram {
+    background-image: url('../assets/images/insta-logo.jpg'); /* Add the Instagram logo URL */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1e3e;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .heading1 h1 {
+        font-size: 2em;
+    }
+    
+/* Login page styles */
+
+
+
+  
+}

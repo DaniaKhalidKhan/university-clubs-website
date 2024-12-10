@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+  <header>
+    <!-- University Logo -->
+    <div class="logo">
+      <img src="https://paf-iast.edu.pk/wp-content/uploads/2024/06/PAFIASTLOGOPNGFinal.png" 
+        width="300" 
+        height="70" 
+        alt="University Logo">
+    </div>
+    
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/student-login.html">Login</a></li>
+        <li><a href="/admin-login.html">Admin Login</a></li>
+        <li><a href="https://paf-iast.edu.pk/" target="_blank">Visit Website</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="login-page">
+    <div class="login-form-container">
+      <h2>Join Our Society</h2>
+      <form action="form-handling.php" method="POST">
+        <input type="hidden" name="society_name" id="society_name" value="Unknown Society">
+        
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" aria-label="Full Name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" aria-label="Email Address" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" aria-label="Phone Number" pattern="[0-9]{10,15}" title="Enter a valid phone number (10-15 digits)" required>
+        
+        <label for="position">Position you want to apply for:</label>
+        <select id="position" name="position" aria-label="Position" required>
+          <option value="" disabled selected>Select Position</option>
+          <option value="President">President</option>
+          <option value="Vice President">Vice President</option>
+          <option value="Secretary">Secretary</option>
+          <option value="Treasurer">Treasurer</option>
+          <option value="Event Coordinator">Event Coordinator</option>
+        </select>
+        
+        <label for="interest">Why do you want to join?</label>
+        <textarea id="interest" name="interest" aria-label="Reason for joining" required></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 University Clubs</p>
+  </footer>
+
+  <script>
+    // Dynamically set society name from URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const societyName = params.get('society') || 'Unknown Society';
+    document.getElementById('society_name').value = societyName;
+  </script>
+</body>
+</html>
